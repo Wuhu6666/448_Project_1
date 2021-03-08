@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<audio autoplay="autoplay" loop="loop" preload="auto" controls="controls" src="music/bgm.mp3"> </audio>Music switchs
 	<title>BATTLESHIP</title>
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +16,7 @@
 		<div id="setup"></div>
 		<button id=resetbutton> Reset Board </button>
 	</center>
-
+	
 		</BR>
 		<img id='p1' src="p1board.png" />
 		<img id='p2' src="p2board.png" />
@@ -23,14 +24,14 @@
 		</BR>
 
 </body>
-
 <script src="./Ship.js"></script>
 <script src="./Board.js"></script>
 <script src="./Game.js"></script>
-<script src="./Placement.js"></script>
+<script src="./Placement.js"></script> 
+
+
 
 <script>
 	document.game = new Game();
-
 </script>
 </html>

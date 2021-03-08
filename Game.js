@@ -80,6 +80,7 @@ class Game {
     		rotate.innerHTML = "Rotate Ship";
     		rotate.onclick = function() {
     			window.rotate();
+				window.playButtonSound();
     		}
     		document.getElementById("center").appendChild(rotate);
         }
@@ -321,6 +322,7 @@ class Game {
 			player = "Player 2";
 		}
 		document.querySelector("#inst").innerText = "Game Over! " + player + " Won!";
+		playAttackSound('music/win.mp3');
 	}
 
 }
@@ -333,3 +335,21 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload();
   })
 })
+
+const sound = new Audio() 
+const fisButton = document.getElementById('button'); 
+const secDiv = document.getElementById('setup'); 
+const thrButton = document.getElementById('resetbutton');
+
+fisButton.addEventListener('click', playButtonSound) 
+secDiv.addEventListener('click', playButtonSound) 
+thrButton.addEventListener('click',playButtonSound)
+
+function playButtonSound() { 
+sound.src = 'music/click.mp3'
+sound.play() }
+
+function playAttackSound(m_src) { 
+	sound.src = m_src;
+	sound.play() }
+

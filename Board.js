@@ -15,6 +15,7 @@ class Board {
 	 * 
 	 * @param {string} id str - identifies cell uniquely 
 	 */
+	
 	constructor(id) {
 		this.cells = []; // this may be useful later when iterating.
 		this.ships = [];
@@ -73,8 +74,10 @@ class Board {
 		if (this.isEmpty(id)) {
 			if (state == "hit") {
 				cell.classList.add("hit");
+				playAttackSound('music/hit.mp3');
 			} else if (state == "miss") {
 				cell.classList.add("miss");
+				playAttackSound('music/miss.mp3');
 			}
             cell.classList.remove('empty');
 		}
@@ -145,5 +148,4 @@ class Board {
 	remove() {
 		this.table.remove();
 	}
-
-}
+} 
