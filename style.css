@@ -37,6 +37,13 @@ html{
   border-radius: 5px;
 }
 
+.vsPlayer {
+  margin: auto;
+  font-family: "American Typewriter", serif;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 label{
   margin: auto;
   font-family: "American Typewriter", serif;
